@@ -1,6 +1,8 @@
 # neutron-analysis
 A group of programs to analyze characteristics of a neutron in a LArTPC. While the programs were written with neutrons in mind, they could in principle be used for other particles, with a few tweaks. 
 
+$\sqrt{3x-1}+(1+x)^2$
+
 Neutrons in a volume of LAr were simulated using edeps-sim. The output of this was fed into GAMPixTools, which simulates the detector. 
 
 # edep-sim analysis
