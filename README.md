@@ -4,6 +4,8 @@ A group of programs to analyze characteristics of a neutron in a LArTPC. While t
 Neutrons in a volume of LAr were simulated using edep-sim. The output of this was fed into GAMPixTools, which simulates the detector. 
 
 
+
+
 ## physics analysis
 Analysis at this stage is purely of the physics of a neutron in a sea of LAr. All programs take .root files as input, and are run as python <program-name.py> <input-file.root>
 
@@ -24,6 +26,8 @@ Spatial RMS quantifies how spread out the particles are; higher RMS indicates gr
 
 ### diff spread
 Plots the same thing as spread, except creates plots for just neutrons and plots for all other particles. I.e., differentiates between neutrons and non-neutrons. 
+
+
 
 
 ## detection analysis
