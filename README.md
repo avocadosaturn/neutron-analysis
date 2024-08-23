@@ -38,13 +38,13 @@ GAMPixTools places the anode at z=0 and defines the detector space to z < 0. Cur
 ### detector 
 Presumes a segments in z > 0 have been removed using zcut.py. Plots how the number of ionized electrons within detector volume (-z only), the number of electrons after drift to anode (-z only, attenuation, diffusion), and the number of electrons after detection (-z only, attenuation, diffusion, threshold, noise) depend on the kinetic energy of the primary neutron. Also plots how efficiency depends on the kinetic energy of the neutron, where efficiency is defined as:
 ```math
-\frac {# of detected electrons} {# of ionized electrons}
+\frac {\# of detected electrons} {\# of ionized electrons}
 ```
 
 ### attenuation correction
 Attenuation follows the established equation,
 ```math
-n_d = n_0 e^(\frac {z} {\tau v_drift}} 
+n_d = n_0 e^{\frac {z} {\tau v_drift}}
 ```
 where $n_d$ is the number of electrons after drift, $n_0$ is the number of ionized electrons, $z$ is the cluster's distance from the anode, $tau$ is the drift lifetime, and $v_drift$ is the drift velocity of the electrons, determined by the electric field. For each cluster, the program solves for $n_0$ and uses that as the cluster after corrected for attenuation. When GAMPixTools applies attenuation, binomial selection is performed, so there is some uncertainty. 
 
