@@ -17,7 +17,7 @@ Plots spatial RMS vs. kinetic energy of primary neutron.  Unweighted RMS calcula
 ```
 Where $\vec{r_i}$ is the position of the ith segment, $\vec{\bar{\mu}}$ is the position of the centroid of the segments, and N is the number of segments. Weighted RMS calculated as
 ```math
-\sqrt \frac {\displaystyle\sum_{i}(\vec{r_i} - \bar{\mu})^2 E_i} {\displaystyle\sum_{i}E_i}
+\sqrt \frac {\displaystyle\sum_{i}(\vec{r_i} - \overline{\mu})^2 E_i} {\displaystyle\sum_{i}E_i}
 ```
 where $E_i$ is dE of the ith segment. The centroid is also weighted, here. 
 Spatial RMS quantifies how spread out the particles are; higher RMS indicates greater spread, and vice versa. 
