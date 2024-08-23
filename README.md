@@ -36,10 +36,7 @@ Plots number of electrons ionized (after recombination) vs. kinetic energy of pr
 GAMPixTools places the anode at z=0 and defines the detector space to z < 0. Currently, it assumes all segments are in z < 0 and does not handle other cases well. zcut.py generates an output file with all z > 0 segments removed from input file. Recommended to use a copy of your original file as in put to preserve the original information. 
 
 ### detector 
-Presumes a segments in z > 0 have been removed using zcut.py. Plots how the number of ionized electrons within detector volume (-z only), the number of electrons after drift to anode (-z only, attenuation, diffusion), and the number of electrons after detection (-z only, attenuation, diffusion, threshold, noise) depend on the kinetic energy of the primary neutron. Also plots how efficiency depends on the kinetic energy of the neutron, where efficiency is defined as:
-```math
-\frac {\text # of detected electrons} {\text # of ionized electrons}
-```
+Presumes a segments in z > 0 have been removed using zcut.py. Plots how the number of ionized electrons within detector volume (-z only), the number of electrons after drift to anode (-z only, attenuation, diffusion), and the number of electrons after detection (-z only, attenuation, diffusion, threshold, noise) depend on the kinetic energy of the primary neutron. Also plots how efficiency depends on the kinetic energy of the neutron, where efficiency is defined as: # of detected electrons / # of ionized electrons.
 
 ### attenuation correction
 Attenuation follows the established equation,
