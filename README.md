@@ -3,13 +3,14 @@ A group of programs to analyze characteristics of a neutron in a LArTPC. While t
 
 Neutrons in a volume of LAr were simulated using edeps-sim. The output of this was fed into GAMPixTools, which simulates the detector. 
 
-# edep-sim analysis
+
+## edep-sim analysis
 Analysis at this stage is purely of the physics of a neutron in a sea of LAr. All programs take .root files as input, and are run as python <program-name.py> <input-file.root>
 
-## energy 
+### energy 
 Plots energy in downstream particles vs. kinetic energy of the primary neutron. Downstream energy is determined as the sum of dEs in all edep-sim segments associated with that event. 
 
-## spread
+### spread
 Plots spatial RMS vs. kinetic energy of primary neutron.  Unweighted RMS calculated as
 ```math
 \sqrt \frac {\displaystyle\sum_{i}(\vec r_i - \vec{\bar{\mu}})^2} {N}
@@ -24,7 +25,22 @@ Spatial RMS quantifies how spread out the particles are; higher RMS indicates gr
 ### diff spread
 Plots the same thing as spread, except creates plots for just neutrons and plots for all other particles. I.e., differentiates between neutrons and non-neutrons. 
 
-# gampix analysis
+
+## gampix analysis
 Looks at detector effects, uses only ionized electron information. All programs take .h5 files as input, and are run as python <program-name.py> <input-file.h5>
 
-## zcut.py
+### true ionization
+Plots number of electrons ionized (after recombination) vs. kinetic energy of primary neutron. Actually, this does not include any detector effects, but uses electron information, so has to be done after the detector simulation. Uses electrons ionized in all downstream segments, regardless of whether or not they are within the detctor volume. 
+
+### zcut
+GAMPixTools places the anode at z=0 and defines the detector space to z < 0. Currently, it assumes all segments are in z < 0 and does not handle other cases well. zcut.py generates an output file with all z > 0 segments removed from input file. Recommended to use a copy of your original file as in put to preserve the original information. 
+
+### detector 
+Presumes a zcut has been done using zcut.py. Plots how number of ionized electrons within detector volume (-z only), number of electrons after drift to anode (-z only, attenuation, diffusion), and number of electrons after detection (-z only, attenuation, diffusion, threshold, noise) depend on the kinetic energy of the primary neutron. 
+
+### attenuation correction
+
+
+### depth
+
+
